@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "connectionse2e.fullname" . }}
+  labels:
+    {{- include "connectionse2e.labels" . | nindent 4 }}
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/path: '/actuator/prometheus'
+    prometheus.io/port: '8080'
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "connectionse2e.selectorLabels" . | nindent 4 }}

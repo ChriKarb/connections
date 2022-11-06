@@ -1,0 +1,6 @@
+#surefire_0
+#Sat Nov 05 00:21:31 CET 2022
+basedir=/Users/ck/Downloads/connections 4
+localRepository=/Users/ck/.m2/repository
+spring-boot.build-image.imageName=myrepo/myimage
+user.dir=/Users/ck/Downloads/connections 4
