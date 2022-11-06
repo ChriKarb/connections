@@ -1,5 +1,5 @@
 export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://127.0.0.1:56662"
+export DOCKER_HOST="tcp://127.0.0.1:56878"
 export DOCKER_CERT_PATH="/Users/ck/.minikube/certs"
 export MINIKUBE_ACTIVE_DOCKERD="minikube"
 

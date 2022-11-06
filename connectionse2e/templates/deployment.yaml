@@ -38,14 +38,19 @@ spec:
             - name: http
               containerPort: 8080
               protocol: TCP
+          # https://www.kaggle.com/code/residentmario/notes-on-kubernetes-production-best-practices/notebook
           livenessProbe:
             httpGet:
               path: /actuator/health
               port: 8080
+            initialDelaySeconds: 35
+            periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /actuator/health
               port: 8080
+            initialDelaySeconds: 40
+            periodSeconds: 10
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
