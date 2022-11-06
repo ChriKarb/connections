@@ -9,10 +9,15 @@ minikube_start:
 	minikube status || (minikube start; exit 1)
 minikube_stop:
 	minikube stop
-build_image_mvn:
+build_minikube_docker_image_mvn:
     #https://medium.com/swlh/build-a-docker-image-using-maven-and-spring-boot-58147045a400
     #use defined dockerd daemon to use the minkube registry
 	source current_builder.sh ; ./mvnw -X spring-boot:build-image -Dspring-boot.build-image.imageName=myrepo/myimage
+build_local:
+	./mvnw package
+
+run_local: build_local
+	java -j
 
 show_local_docker_images:
 	docker images
