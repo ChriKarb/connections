@@ -53,4 +53,4 @@ install_prometheus:
 	helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 	helm install my-prometheus prometheus-community/prometheus --version 15.16.1\
 
-build_all: minikube_start get_minikube_dockerd_setting_for_local_builds build_image_mvn
+build_all: minikube_start get_minikube_dockerd_setting_for_local_builds build_minikube_docker_image_mvn
