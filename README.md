@@ -19,7 +19,7 @@ The checks is implemented as a number of prometheus metrics based on the microme
     * [helm](): we like to have one (just a simple wrapper `helm create <helmchart>`)
     * [minikube](): a local environment for deploying pods and container
     * [mvnw](): build with a wamevn wrapper (from https://start.spring.io/)
-    * [makefile](https://github.com/aws/aws-cli): better than a readme ?
+    * [makefile](): better than a readme ?
     * [brew](): used for installing packages
     
 ## <a name="install"></a>Installation
